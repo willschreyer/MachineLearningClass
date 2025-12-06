@@ -92,30 +92,9 @@ Includes:
 
 ### Example: Target Distribution
 
----
+![Target Distribution](results/target_distribution.png)
 
-# 2. Baseline Model — Logistic Regression
-
-**Location:** `notebooks/02_modeling_baseline.ipynb`
-
-Why Logistic Regression?
-
-- Simple and interpretable  
-- Provides a baseline for comparison  
-- Useful for understanding feature directions  
-
-### Baseline Performance (Insert your actual values)
-
-Accuracy: X.XXX  
-F1 Score: X.XXX  
-ROC AUC: X.XXX  
-PR AUC: X.XXX  
-
-### Confusion Matrix
-
----
-
-# 3. Final Model — LightGBM (Gradient Boosting)
+# 2. Final Model — LightGBM (Gradient Boosting)
 
 **Model Code:** `src/model/model.py`  
 **Training Code:** `src/trainer/trainer.py`  
@@ -136,12 +115,12 @@ PR AUC: X.XXX
 - Threshold optimization using Precision-Recall curve  
 - Evaluation on unseen test split  
 
-### Final Model Performance (Insert your actual values)
+### Final Model Performance
 
-Accuracy: X.XXX  
-F1 Score: X.XXX  
-ROC AUC: X.XXX  
-PR AUC: X.XXX  
+Accuracy: 0.730 
+F1 Score: 0.771  
+ROC AUC: 0.798  
+PR AUC: 0.798  
 
 ---
 
@@ -149,9 +128,15 @@ PR AUC: X.XXX
 
 ### Confusion Matrix (LightGBM)
 
+![LightGBM Confusion Matrix](results/lightgbm_confusion_matrix.png)
+
 ### Feature Importance
 
+![Feature Importance](results/lightgbm_feature_importance.png)
+
 ### ROC Curve
+
+![ROC Curve](results/lightgbm_roc_curve.png)
 
 ---
 
