@@ -112,7 +112,7 @@ Includes:
 
 ### Final Model Performance
 
-Accuracy: 0.730 
+Accuracy: 0.730  
 F1 Score: 0.771  
 ROC AUC: 0.798  
 PR AUC: 0.798  
