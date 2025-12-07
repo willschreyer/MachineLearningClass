@@ -1,10 +1,10 @@
 # Gold Direction Prediction with Machine Learning
 
-A machine learning pipeline for forecasting daily gold price direction using technical indicators and macroeconomic features.
+A machine learning pipeline for forecasting 10-day gold price direction using technical indicators and macroeconomic features.
 
 ## Project Overview
 
-This project builds a supervised machine learning model that predicts whether gold will go up or down the next day.  
+This project builds a supervised machine learning model that predicts whether gold will go up or down the next 10 days.  
 Gold price movements are influenced by volatility, interest rates, equities, and macroeconomic cycles.  
 The goal of this project is to:
 
@@ -22,13 +22,9 @@ This project was completed as the final project for Applied Machine Learning.
 
 ```text
 .
-├── data/                 # Dataset generation scripts (no raw data included)
-│   └── data_loader.py
-│
-├── notebooks/            # EDA, baseline model, LightGBM model
+├── notebooks/            # EDA, LightGBM model
 │   ├── 01_eda.ipynb
-│   ├── 02_modeling_baseline.ipynb
-│   └── 03_modeling_lightgbm.ipynb
+│   └── 02_final_model.ipynb
 │
 ├── src/                  
 │   ├── dataset/
@@ -40,7 +36,6 @@ This project was completed as the final project for Applied Machine Learning.
 │
 ├── results/              # Saved images and model outputs
 │   ├── target_distribution.png
-│   ├── logreg_confusion_matrix.png
 │   ├── lightgbm_confusion_matrix.png
 │   ├── lightgbm_feature_importance.png
 │   └── lightgbm_roc_curve.png
@@ -71,8 +66,8 @@ Technical indicators are also engineered, including:
 
 ### Target Variable
 
-1 → Next-day gold closes higher  
-0 → Next-day gold closes lower  
+1 → 10-day gold closes higher  
+0 → 10-day gold closes lower  
 
 This is a binary classification task.
 
@@ -98,7 +93,7 @@ Includes:
 
 **Model Code:** `src/model/model.py`  
 **Training Code:** `src/trainer/trainer.py`  
-**Notebook:** `notebooks/03_modeling_lightgbm.ipynb`
+**Notebook:** `notebooks/02_final_model.ipynb`
 
 ### Why LightGBM?
 
@@ -163,12 +158,12 @@ pip install -r requirements.txt
 ---
 
 # Future Work
-
-- Add SHAP value explanations for model transparency  
+  
 - Use walk-forward time-series cross-validation  
 - Include more macroeconomic indicators (CPI, Fed Funds Rate, GDP)  
-- Experiment with XGBoost, CatBoost, or neural networks  
-- Extend the problem to multi-day forecasting  
+- Experiment with CatBoost, or neural networks  
+- Extend the problem to single-day forecasting 
+- Add news insights as a feature 
 
 ---
 
